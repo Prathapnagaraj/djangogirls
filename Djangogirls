@@ -1,0 +1,24 @@
+Djangogirls
+
+setup
+-----
+install python 3.6
+add python path to environmental variable by name python3 and pip3
+
+setup virtual env
+python3 -m venv myvenv
+
+activate Virtualenv
+myenv\script\activate
+
+create django-project
+	myvenv\Scripts\django-admin.exe startproject mysite .
+
+create app
+    python manage.py startapp blog
+
+make migrations
+    python manage.py makemigrations blog
+
+refer for django
+https://docs.djangoproject.com/en/1.10/ref/contrib/admin/
