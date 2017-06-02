@@ -22,3 +22,32 @@ make migrations
 
 refer for django
 https://docs.djangoproject.com/en/1.10/ref/contrib/admin/
+
+query set
+    from blog.models import Post
+    Post.objects.all() # To get all objects
+    from django.contrib.auth.models import User
+    User.objects.all()
+    me=User.objects.get(username="pbillav")
+    Post.objects.create(author=me, title="Simple story", text="test")
+    Post.objects.filter(author=me)
+    Post.objects.filter(title='title')
+    from django.utils import timezone
+    Post.objects.filter(published_date__lte=timezone.now())
+    post=Post.objects.get(title="simple story")
+    post.publish()
+    Post.objects.filter(published_date__lte=timezone.now())
+
+    ordering
+    Post.objects.order_by('created_date')
+    Post.objects.filter(published_date__lte=timezone.now()).oder_by('published_date')
+    exit()
+
+
+
+
+
+
+
+
+
